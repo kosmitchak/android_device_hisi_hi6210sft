@@ -20,6 +20,7 @@ TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a7
 
 # Board
+BOARD_HAS_LARGE_FILESYSTEM := true
 TARGET_BOARD_PLATFORM := hi6210sft
 
 # Bootloader
