@@ -21,3 +21,6 @@ TARGET_2ND_CPU_VARIANT := cortex-a7
 
 # Board
 TARGET_BOARD_PLATFORM := hi6210sft
+
+# Bootloader
+TARGET_NO_BOOTLOADER := true
