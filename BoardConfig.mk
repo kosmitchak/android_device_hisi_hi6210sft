@@ -25,3 +25,8 @@ TARGET_BOARD_PLATFORM := hi6210sft
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := hi6210sft
 TARGET_NO_BOOTLOADER := true
+
+# Kernel
+BOARD_KERNEL_BASE := 0x07478000
+BOARD_KERNEL_CMDLINE := hisi_dma_print=0 vmalloc=384M maxcpus=8 no_irq_affinity androidboot.selinux=permissive
+BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x07b88000 --tags_offset 0x02988000
