@@ -28,6 +28,9 @@ TARGET_BOARD_PLATFORM := hi6210sft
 TARGET_BOOTLOADER_BOARD_NAME := hi6210sft
 TARGET_NO_BOOTLOADER := true
 
+# Display
+TARGET_USE_PAN_DISPLAY := true
+
 # Kernel
 BOARD_KERNEL_BASE := 0x07478000
 BOARD_KERNEL_CMDLINE := hisi_dma_print=0 vmalloc=384M maxcpus=8 no_irq_affinity androidboot.selinux=permissive
