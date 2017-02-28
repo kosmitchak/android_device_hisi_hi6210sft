@@ -57,3 +57,17 @@ endif
 # Recovery
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
 RECOVERY_SDCARD_ON_DATA := true
+
+# Recovery TWRP
+RECOVERY_VARIANT := twrp
+TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/recovery/root/etc/twrp.fstab
+TW_BRIGHTNESS_PATH := "/sys/devices/platform/balong_fb.1/leds/lcd_backlight0/brightness"
+TW_CUSTOM_BATTERY_PATH := "/sys/devices/battery.0/power_supply/Battery"
+TW_EXCLUDE_SUPERSU := true
+TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
+TW_EXTERNAL_STORAGE_PATH := "/external_sd"
+TW_FBIOPAN := true
+TW_MAX_BRIGHTNESS := 255
+TW_SCREEN_BLANK_ON_BOOT := true
+TW_THEME := portrait_hdpi
+TWHAVE_SELINUX := true
