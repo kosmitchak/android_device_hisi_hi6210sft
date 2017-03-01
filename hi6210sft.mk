@@ -61,6 +61,15 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 	ro.zygote=zygote64_32 \
 	security.perf_harden=1
 
+# Ramdisk
+PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/rootdir/fstab.hi6210sft:root/fstab.hi6210sft \
+	$(LOCAL_PATH)/rootdir/init.connectivity.rc:root/init.connectivity.rc \
+	$(LOCAL_PATH)/rootdir/init.hi6210sft.rc:root/ \
+	$(LOCAL_PATH)/rootdir/init.rc:root/init.rc \
+	$(LOCAL_PATH)/rootdir/init.recovery.hi6210sft.rc:root/init.recovery.hi6210sft.rc \
+	$(LOCAL_PATH)/rootdir/ueventd.hi6210sft.rc:root/ueventd.hi6210sft.rc
+
 # Zygote
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 	ro.zygote=zygote64_32

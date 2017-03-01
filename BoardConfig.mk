@@ -67,6 +67,9 @@ BOARD_SYSTEMIMAGE_FILE_SYSTEM_TYPE := squashfs
 endif
 endif
 
+# Ramdisk
+TARGET_PROVIDES_INIT_RC := true
+
 # Recovery
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
 RECOVERY_SDCARD_ON_DATA := true
