@@ -14,6 +14,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     	hw.lcd.lcd_density=320 \
     	ro.sf.lcd_density=320 \
 
+# File System
+PRODUCT_PACKAGES += \
+    	make_ext4fs \
+    	setup_fs
+
 # Graphics
 PRODUCT_PACKAGES += \
 	iontest \
