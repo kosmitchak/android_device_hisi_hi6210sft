@@ -50,6 +50,17 @@ endif
 PRODUCT_COPY_FILES += \
     	$(LOCAL_KERNEL):kernel
 
+# Properties: add some override flags, same one used on stock Emui 4.0.
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+	debug.atrace.tags.enableflags=0 \
+	ro.adb.secure=1 \
+	ro.allow.mock.location=0 \
+	ro.debuggable=0 \
+	ro.magic.api.version=0.1 \
+	ro.secure=1 \
+	ro.zygote=zygote64_32 \
+	security.perf_harden=1
+
 # Zygote
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 	ro.zygote=zygote64_32
