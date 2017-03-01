@@ -14,3 +14,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
     	hw.lcd.lcd_density=320 \
     	ro.sf.lcd_density=320 \
 
+# Kernel
+ifeq ($(TARGET_PREBUILT_KERNEL),)
+LOCAL_KERNEL := device/hisi/hi6210sft/Image
+else
+LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
+endif
+
+PRODUCT_COPY_FILES += \
+    	$(LOCAL_KERNEL):kernel
