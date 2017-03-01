@@ -1,3 +1,5 @@
+LOCAL_PATH := device/hisi/hi6210sft
+
 # 64 Bit
 ANDROID_64=true
 TARGET_SUPPORTS_32_BIT_APPS := true
