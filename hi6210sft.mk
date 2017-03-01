@@ -28,6 +28,18 @@ PRODUCT_PROPERTY_OVERRIDES += \
     	persist.sys.use_dithering=2 \
     	ro.opengles.version=131072 \
 
+PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/rootdir/system/lib/egl/libGLES_android.so:system/lib/egl/libGLES_android.so \
+	$(LOCAL_PATH)/rootdir/system/lib/egl/libGLES_mali.so:system/lib/egl/libGLES_mali.so \
+	$(LOCAL_PATH)/rootdir/system/lib/hw/gralloc.hi6210sft.so:system/lib/hw/gralloc.hi6210sft.so \
+	$(LOCAL_PATH)/rootdir/system/lib/libion.so:system/lib/libion.so \
+
+PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/rootdir/system/lib64/egl/libGLES_android.so:system/lib64/egl/libGLES_android.so \
+	$(LOCAL_PATH)/rootdir/system/lib64/egl/libGLES_mali.so:system/lib64/egl/libGLES_mali.so \
+	$(LOCAL_PATH)/rootdir/system/lib64/hw/gralloc.hi6210sft.so:system/lib64/hw/gralloc.hi6210sft.so \
+	$(LOCAL_PATH)/rootdir/system/lib64/libion.so:system/lib64/libion.so \
+
 # Kernel
 ifeq ($(TARGET_PREBUILT_KERNEL),)
 LOCAL_KERNEL := device/hisi/hi6210sft/Image
