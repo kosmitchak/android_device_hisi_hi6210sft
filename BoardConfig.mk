@@ -39,6 +39,12 @@ USE_CAMERA_STUB := true
 # Display
 TARGET_USE_PAN_DISPLAY := true
 
+# Graphics
+ANDROID_ENABLE_RENDERSCRIPT := true
+BIONIC_TESTS ?= true
+TARGET_HARDWARE_3D := true
+USE_OPENGL_RENDERER := true
+
 # Kernel
 BOARD_KERNEL_BASE := 0x07478000
 BOARD_KERNEL_CMDLINE := hisi_dma_print=0 vmalloc=384M maxcpus=8 no_irq_affinity androidboot.selinux=permissive

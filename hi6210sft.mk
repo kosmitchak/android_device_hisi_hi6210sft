@@ -14,6 +14,20 @@ PRODUCT_PROPERTY_OVERRIDES += \
     	hw.lcd.lcd_density=320 \
     	ro.sf.lcd_density=320 \
 
+# Graphics
+PRODUCT_PACKAGES += \
+	iontest \
+	ion-unit-tests \
+	libGLES_android \
+	libion.huawei \
+	libion
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    	debug.hwui.render_dirty_regions=false \
+    	persist.sys.strictmode.disable=1 \
+    	persist.sys.use_dithering=2 \
+    	ro.opengles.version=131072 \
+
 # Kernel
 ifeq ($(TARGET_PREBUILT_KERNEL),)
 LOCAL_KERNEL := device/hisi/hi6210sft/Image
