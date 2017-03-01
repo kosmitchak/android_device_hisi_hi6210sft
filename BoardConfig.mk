@@ -21,6 +21,9 @@ TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a7
 
+# Assert
+TARGET_OTA_ASSERT_DEVICE := ALE-L21,cherry,cherryk,CherryPlus,chm-u01,CHM-U01,hi6210sft,hwChe2,Che2-L11
+
 # Board
 BOARD_HAS_LARGE_FILESYSTEM := true
 BOARD_HAS_NO_SELECT_BUTTON := true
