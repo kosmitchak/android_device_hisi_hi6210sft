@@ -27,6 +27,10 @@ PRODUCT_PACKAGES += \
     	make_ext4fs \
     	setup_fs
 
+# Firmware
+PRODUCT_COPY_FILES += \
+	$(call find-copy-subdir-files,*,$(LOCAL_PATH)/rootdir/system/vendor/firmware,system/vendor/firmware) \
+
 # GPS
 $(call inherit-product, device/common/gps/gps_us_supl.mk)
 
