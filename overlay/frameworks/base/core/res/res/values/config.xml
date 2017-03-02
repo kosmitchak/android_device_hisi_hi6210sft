@@ -117,7 +117,7 @@
 
     <!-- Does the notification LED support multiple colors?
                   Used to decide if the user can change the colors -->
-    <bool name="config_multiColorNotificationLed">true</bool>
+    <!--<bool name="config_multiColorNotificationLed">true</bool>-->
 
     <!-- Default color for notification LED. -->
     <color name="config_defaultNotificationColor">#ff00ff00</color>
@@ -272,7 +272,7 @@
             64 - Volume rocker
          For example, a device with Home, Back and Menu keys would set this
          config to 7. -->
-    <integer name="config_deviceHardwareWakeKeys">64</integer>
+    <!--<integer name="config_deviceHardwareWakeKeys">64</integer>-->
 
     <!-- Indicate whether the SD card is accessible without removing the battery. -->
     <bool name="config_batterySdCardAccessibility">true</bool>
