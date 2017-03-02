@@ -14,6 +14,9 @@ PRODUCT_PACKAGES += \
     	bt_vendor.conf \
     	libbt-vendor \
 
+PRODUCT_COPY_FILES += \
+	$(call find-copy-subdir-files,*,$(LOCAL_PATH)/rootdir/system/etc/bluetooth,system/etc/bluetooth) \
+
 # Dalvik
 PRODUCT_TAGS += dalvik.gc.type-precise
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
@@ -30,6 +33,21 @@ PRODUCT_PACKAGES += \
 # Firmware
 PRODUCT_COPY_FILES += \
 	$(call find-copy-subdir-files,*,$(LOCAL_PATH)/rootdir/system/vendor/firmware,system/vendor/firmware) \
+
+PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/rootdir/system/lib/libbt_factory_test.so:system/lib/libbt_factory_test.so \
+	$(LOCAL_PATH)/rootdir/system/lib/libbt_factory_test_hi110x.so:system/lib/libbt_factory_test_hi110x.so \
+
+PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/rootdir/system/lib64/libbt_factory_test.so:system/lib64/libbt_factory_test.so \
+	$(LOCAL_PATH)/rootdir/system/lib64/libbt_factory_test_hi110x.so:system/lib64/libbt_factory_test_hi110x.so \
+
+PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/rootdir/system/vendor/lib/libbt-vendor.so:system/vendor/lib/libbt-vendor.so \
+	$(LOCAL_PATH)/rootdir/system/vendor/lib/libbt-vendor-hi110x.so:system/vendor/lib/libbt-vendor-hi110x.so \
+
+PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/rootdir/system/vendor/lib64/libbt-vendor-hi110x.so:system/vendor/lib64/libbt-vendor-hi110x.so \
 
 # GPS
 $(call inherit-product, device/common/gps/gps_us_supl.mk)
