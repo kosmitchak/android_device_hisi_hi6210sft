@@ -55,6 +55,10 @@ endif
 PRODUCT_COPY_FILES += \
     	$(LOCAL_KERNEL):kernel
 
+# Misc
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+	qemu.hw.mainkeys=0
+
 # Ramdisk
 PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/rootdir/fstab.hi6210sft:root/fstab.hi6210sft \
