@@ -27,6 +27,29 @@ PRODUCT_PACKAGES += \
     	make_ext4fs \
     	setup_fs
 
+# GPS
+$(call inherit-product, device/common/gps/gps_us_supl.mk)
+
+PRODUCT_COPY_FILES += \
+	$(call find-copy-subdir-files,*,$(LOCAL_PATH)/rootdir/system/etc/gnss,system/etc/gnss) \
+	$(LOCAL_PATH)/rootdir/system/etc/gps.conf:system/etc/gps.conf \
+	$(LOCAL_PATH)/rootdir/system/etc/gpsconfig.xml:system/etc/gpsconfig.xml \
+	$(LOCAL_PATH)/rootdir/system/etc/gpsconfig_beta.xml:system/etc/gpsconfig_beta.xml \
+	$(LOCAL_PATH)/rootdir/system/etc/hisi_cfg.ini:system/etc/hisi_cfg.ini \
+	$(LOCAL_PATH)/rootdir/system/etc/hisi_cfg_alice.ini:system/etc/hisi_cfg_alice.ini \
+	$(LOCAL_PATH)/rootdir/system/etc/hisi_cfg_cherry.ini:system/etc/hisi_cfg_cherry.ini \
+
+PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/rootdir/system/lib/hw/gps.hi110x.default.so:system/lib/hw/gps.hi110x.default.so \
+	$(LOCAL_PATH)/rootdir/system/lib/libgps_factory_test.so:system/lib/libgps_factory_test.so \
+	$(LOCAL_PATH)/rootdir/system/lib/libgps_factory_test_hi110x.so:system/lib/libgps_factory_test_hi110x.so \
+
+PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/rootdir/system/lib64/hw/libgps_factory_test.so:system/lib64/hw/libgps_factory_test.so \
+	$(LOCAL_PATH)/rootdir/system/lib64/hw/libgps_factory_test_hi110x.so:system/lib64/hw/libgps_factory_test_hi110x.so \
+	$(LOCAL_PATH)/rootdir/system/lib64/libgps_factory_test.so:system/lib64/libgps_factory_test.so \
+	$(LOCAL_PATH)/rootdir/system/lib64/libgps_factory_test_hi110x.so:system/lib64/libgps_factory_test_hi110x.so \
+
 # Graphics
 PRODUCT_PACKAGES += \
 	iontest \

@@ -45,6 +45,10 @@ USE_CAMERA_STUB := true
 # Display
 TARGET_USE_PAN_DISPLAY := true
 
+# GPS
+USE_DEVICE_SPECIFIC_GPS := true
+TARGET_NO_RPC := true
+
 # Graphics
 ANDROID_ENABLE_RENDERSCRIPT := true
 BIONIC_TESTS ?= true
