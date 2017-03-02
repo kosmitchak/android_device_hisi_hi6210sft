@@ -1,4 +1,5 @@
 # Android Open Source Project Common Stuff
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
@@ -6,13 +7,12 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xhdpi
 
+# Dalvik
+$(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
+
 # Display
 TARGET_SCREEN_HEIGHT := 1280
 TARGET_SCREEN_WIDTH := 720
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    	hw.lcd.lcd_density=320 \
-    	ro.sf.lcd_density=320 \
 
 # File System
 PRODUCT_PACKAGES += \
@@ -55,29 +55,10 @@ endif
 PRODUCT_COPY_FILES += \
     	$(LOCAL_KERNEL):kernel
 
-# Properties: add some override flags, same one used on stock Emui 4.0.
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-	debug.atrace.tags.enableflags=0 \
-	ro.adb.secure=1 \
-	ro.allow.mock.location=0 \
-	ro.debuggable=0 \
-	ro.magic.api.version=0.1 \
-	ro.secure=1 \
-	ro.zygote=zygote64_32 \
-	security.perf_harden=1
-
 # Ramdisk
 PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/rootdir/fstab.hi6210sft:root/fstab.hi6210sft \
 	$(LOCAL_PATH)/rootdir/init.connectivity.rc:root/init.connectivity.rc \
-	$(LOCAL_PATH)/rootdir/init.hi6210sft.rc:root/ \
-	$(LOCAL_PATH)/rootdir/init.rc:root/init.rc \
+	$(LOCAL_PATH)/rootdir/init.hi6210sft.rc:root/init.hi6210sft.rc \
 	$(LOCAL_PATH)/rootdir/init.recovery.hi6210sft.rc:root/init.recovery.hi6210sft.rc \
-	$(LOCAL_PATH)/rootdir/ueventd.hi6210sft.rc:root/ueventd.hi6210sft.rc
-
-# Zygote
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-	ro.zygote=zygote64_32
-
-PRODUCT_COPY_FILES += \
-	system/core/rootdir/init.zygote64_32.rc:root/init.zygote64_32.rc
+	$(LOCAL_PATH)/rootdir/ueventd.hi6210sft.rc:root/ueventd.hi6210sft.rc \

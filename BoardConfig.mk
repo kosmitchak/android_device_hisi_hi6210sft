@@ -47,7 +47,7 @@ USE_OPENGL_RENDERER := true
 
 # Kernel
 BOARD_KERNEL_BASE := 0x07478000
-BOARD_KERNEL_CMDLINE := hisi_dma_print=0 vmalloc=384M maxcpus=8 no_irq_affinity androidboot.selinux=permissive
+BOARD_KERNEL_CMDLINE := hisi_dma_print=0 vmalloc=384M maxcpus=8 no_irq_affinity androidboot.selinux=disabled
 BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x07b88000 --tags_offset 0x02988000
 
 TARGET_PREBUILT_KERNEL := device/hisi/hi6210sft/Image
@@ -66,9 +66,6 @@ ifeq ($(TARGET_SYSTEMIMAGES_USE_SQUASHFS), true)
 BOARD_SYSTEMIMAGE_FILE_SYSTEM_TYPE := squashfs
 endif
 endif
-
-# Ramdisk
-TARGET_PROVIDES_INIT_RC := true
 
 # Recovery
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
