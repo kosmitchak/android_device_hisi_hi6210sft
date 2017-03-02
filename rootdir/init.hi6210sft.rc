@@ -27,7 +27,7 @@ on post-fs
     setprop status.battery.level_raw  50
     setprop status.battery.level_scale 9
 
-    setprop ro.sf.lcd_density 160
+    setprop ro.sf.lcd_density 320
 
     write /dev/cpuset/foreground/cpus 0-7
 
