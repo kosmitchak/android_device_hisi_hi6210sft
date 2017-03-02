@@ -87,7 +87,7 @@ RECOVERY_SDCARD_ON_DATA := true
 
 # Recovery TWRP
 RECOVERY_VARIANT := twrp
-TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/recovery/root/etc/twrp.fstab
+TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/ramdisk/fstab.hi6210sft
 TW_BRIGHTNESS_PATH := "/sys/devices/platform/balong_fb.1/leds/lcd_backlight0/brightness"
 TW_CUSTOM_BATTERY_PATH := "/sys/devices/battery.0/power_supply/Battery"
 TW_EXCLUDE_SUPERSU := true
