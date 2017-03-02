@@ -9,6 +9,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 PRODUCT_AAPT_CONFIG := xhdpi hdpi normal
 PRODUCT_AAPT_PREF_CONFIG := xhdpi
 
+# Binaries
+PRODUCT_COPY_FILES += \
+	$(call find-copy-subdir-files,*,$(LOCAL_PATH)/rootdir/system/bin,system/bin) \
+
 # Bluetooth
 PRODUCT_PACKAGES += \
     	bt_vendor.conf \
