@@ -31,7 +31,7 @@
   <item name="dsp.video">176</item>
   <item name="radio.active">190</item>
   <item name="gps.on">70</item>
-  <item name="battery.capacity">2900</item> <!-- 3900mAh -->
+  <item name="battery.capacity">2200</item> <!-- 2200mAh -->
   <item name="radio.scanning">65</item> <!-- TBD -->
   <!-- Current consumed by the radio at different signal strengths, when paging  -->
   <array name="radio.on"> <!-- 1 entry per signal strength bin, TBD -->
@@ -65,5 +65,5 @@
     <value>2455</value>
   </array>
   <!-- This is the battery capacity in mAh (measured at nominal voltage) -->
-  <item name="battery.capacity">3000</item>
+  <item name="battery.capacity">2200</item>
 </device>
