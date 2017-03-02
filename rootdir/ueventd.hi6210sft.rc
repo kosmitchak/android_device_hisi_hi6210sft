@@ -9,3 +9,6 @@
 /dev/miscnff              0770   root        system
 /dev/hifi_misc            0770   root        audio
 /dev/akm09911_dev         0660   system      system
+
+# NFC
+/dev/pn544              0660    nfc         nfc
