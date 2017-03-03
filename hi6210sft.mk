@@ -102,6 +102,10 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/rootdir/system/lib64/hw/gralloc.hi6210sft.so:system/lib64/hw/gralloc.hi6210sft.so \
 	$(LOCAL_PATH)/rootdir/system/lib64/libion.so:system/lib64/libion.so \
 
+# Huawei P8 Lite Components
+PRODUCT_PACKAGES += \
+	lights.hi6210sft
+
 # Kernel
 ifeq ($(TARGET_PREBUILT_KERNEL),)
 LOCAL_KERNEL := device/hisi/hi6210sft/Image
