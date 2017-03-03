@@ -23,6 +23,13 @@ PRODUCT_PACKAGES += \
      	tinypcminfo \
      	tinyplay \
 
+PRODUCT_COPY_FILES += \
+	$(call find-copy-subdir-files,*,$(LOCAL_PATH)/rootdir/system/etc/audio,system/etc/audio) \
+	$(call find-copy-subdir-files,*,$(LOCAL_PATH)/rootdir/system/etc/srs,system/etc/srs) \
+	$(call find-copy-subdir-files,*,$(LOCAL_PATH)/rootdir/system/etc/sws,system/etc/sws) \
+	$(LOCAL_PATH)/rootdir/system/etc/audio_effects.conf:system/etc/audio_effects.conf \
+	$(LOCAL_PATH)/rootdir/system/etc/audio_policy.conf:system/etc/audio_policy.conf \
+
 # Binaries
 PRODUCT_COPY_FILES += \
 	$(call find-copy-subdir-files,*,$(LOCAL_PATH)/rootdir/system/bin,system/bin) \
