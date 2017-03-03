@@ -9,6 +9,20 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 PRODUCT_AAPT_CONFIG := xhdpi hdpi normal
 PRODUCT_AAPT_PREF_CONFIG := xhdpi
 
+# Audio
+PRODUCT_PACKAGES += \
+     	audio.a2dp.default \
+     	audio_policy.stub \
+     	audio.primary.default \
+     	audio.r_submix.default \
+     	audio.usb.default \
+     	libaudioutils \
+     	libtinyalsa \
+     	tinycap \
+     	tinymix \
+     	tinypcminfo \
+     	tinyplay \
+
 # Binaries
 PRODUCT_COPY_FILES += \
 	$(call find-copy-subdir-files,*,$(LOCAL_PATH)/rootdir/system/bin,system/bin) \

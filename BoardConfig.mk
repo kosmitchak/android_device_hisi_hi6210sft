@@ -24,6 +24,10 @@ TARGET_2ND_CPU_VARIANT := cortex-a7
 # Assert
 TARGET_OTA_ASSERT_DEVICE := ALE-L21,cherry,cherryk,CherryPlus,chm-u01,CHM-U01,hi6210sft,hwChe2,Che2-L11
 
+# Audio
+BOARD_USES_ALSA_AUDIO := false
+BOARD_USES_GENERIC_AUDIO := true
+
 # Bluetooth
 BOARD_BLUEDROID_VENDOR_CONF := $(LOCAL_PATH)/bluetooth/vnd_hi6210sft.txt
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(LOCAL_PATH)/bluetooth
