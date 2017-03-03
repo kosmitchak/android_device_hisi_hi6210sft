@@ -39,6 +39,40 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/rootdir/system/etc/media_codecs_performance.xml:system/etc/media_codecs_performance.xml \
 	$(LOCAL_PATH)/rootdir/system/etc/media_profiles.xml:system/etc/media_profiles.xml \
 
+PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/rootdir/system/lib/hw/audio.primary.hi6210sft.so:system/lib/hw/audio.primary.hi6210sft.so \
+	$(LOCAL_PATH)/rootdir/system/lib/hw/audio.r_submix.default.so:system/lib/hw/audio.r_submix.default.so \
+	$(LOCAL_PATH)/rootdir/system/lib/hw/hw_af_extend.default.so:system/lib/hw/hw_af_extend.default.so \
+	$(LOCAL_PATH)/rootdir/system/lib/libaudioalgoservice_jni.so:system/lib/libaudioalgoservice_jni.so \
+	$(LOCAL_PATH)/rootdir/system/lib/libaudio_custom.so:system/lib/libaudio_custom.so \
+	$(LOCAL_PATH)/rootdir/system/lib/libaudioflinger.huawei.so:system/lib/libaudioflinger.hauwei.so \
+	$(LOCAL_PATH)/rootdir/system/lib/libaudioroute.so:system/lib/libaudioroute.so \
+	$(LOCAL_PATH)/rootdir/system/lib/libbalong_audio_ril.so:system/lib/libbalong_audio_ril.so \
+	$(LOCAL_PATH)/rootdir/system/lib/libearpa.so:system/lib/libearpa.so \
+	$(LOCAL_PATH)/rootdir/system/lib/libmax98925.so:system/lib/libmax98925.so \
+	$(LOCAL_PATH)/rootdir/system/lib/libnvme.so:system/lib/libnvme.so \
+	$(LOCAL_PATH)/rootdir/system/lib/libOpenMAXAL.so:system/lib/libOpenMAXAL.so \
+	$(LOCAL_PATH)/rootdir/system/lib/libOpenSLES.so:system/lib/libOpenSLES.so \
+	$(LOCAL_PATH)/rootdir/system/lib/libsoundtrigger.so:system/lib/libsoundtrigger.so \
+	$(LOCAL_PATH)/rootdir/system/lib/libsoundtriggerservice.so:system/lib/libsoundtriggerservice.so \
+	$(LOCAL_PATH)/rootdir/system/lib/libsrsprocessing.so:system/lib/libsrsprocessing.so \
+	$(LOCAL_PATH)/rootdir/system/lib/libswsprocessing.so:system/lib/libswsprocessing.so \
+	$(LOCAL_PATH)/rootdir/system/lib/libtfa9895.so:system/lib/libtfa9895.so \
+
+PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/rootdir/system/lib64/hw/audio.primary.hi6210sft.so:system/lib64/hw/audio.primary.hi6210sft.so \
+	$(LOCAL_PATH)/rootdir/system/lib64/hw/audio.r_submix.default.so:system/lib64/hw/audio.r_submix.default.so \
+	$(LOCAL_PATH)/rootdir/system/lib64/libbalong_audio_ril.so:system/lib64/libbalong_audio_ril.so \
+	$(LOCAL_PATH)/rootdir/system/lib64/libearpa.so:system/lib64/libearpa.so \
+	$(LOCAL_PATH)/rootdir/system/lib64/libmax98925.so:system/lib64/libmax98925.so \
+	$(LOCAL_PATH)/rootdir/system/lib64/libnvme.so:system/lib64/libnvme.so \
+	$(LOCAL_PATH)/rootdir/system/lib64/libOpenMAXAL.so:system/lib64/libOpenMAXAL.so \
+	$(LOCAL_PATH)/rootdir/system/lib64/libOpenSLES.so:system/lib64/libOpenSLES.so \
+	$(LOCAL_PATH)/rootdir/system/lib64/libsoundtrigger.so:system/lib64/libsoundtrigger.so \
+	$(LOCAL_PATH)/rootdir/system/lib64/libsoundtriggerservice.so:system/lib64/libsoundtriggerservice.so \
+	$(LOCAL_PATH)/rootdir/system/lib64/libswsprocessing.so:system/lib64/libswsprocessing.so \
+	$(LOCAL_PATH)/rootdir/system/lib64/libtfa9895.so:system/lib64/libtfa9895.so \
+
 # Binaries
 PRODUCT_COPY_FILES += \
 	$(call find-copy-subdir-files,*,$(LOCAL_PATH)/rootdir/system/bin,system/bin) \
