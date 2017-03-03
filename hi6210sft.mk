@@ -183,6 +183,22 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/rootdir/init.recovery.hi6210sft.rc:root/init.recovery.hi6210sft.rc \
 	$(LOCAL_PATH)/rootdir/ueventd.hi6210sft.rc:root/ueventd.hi6210sft.rc \
 
+PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/rootdir/system/lib/hw/sensorcaps.default.so:system/lib/hw/sensorcaps.default.so \
+	$(LOCAL_PATH)/rootdir/system/lib/hw/sensors.default.so:system/lib/hw/sensors.default.so \
+
+# Sensors
+PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/rootdir/system/lib64/hw/lights.default.so:system/lib64/hw/lights.hi6210sft.so \
+	$(LOCAL_PATH)/rootdir/system/lib64/hw/sensorcaps.default.so:system/lib64/hw/sensorcaps.default.so \
+	$(LOCAL_PATH)/rootdir/system/lib64/hw/sensors.default.so:system/lib64/hw/sensors.default.so \
+
+PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/rootdir/system/vendor/lib/libcalmodule_akm.so:system/vendor/lib/libcalmodule_akm.so \
+
+PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/rootdir/system/vendor/lib64/libcalmodule_akm.so:system/vendor/lib64/libcalmodule_akm.so \
+
 # Zygote
 ADDITIONAL_DEFAULT_PROPERTIES += \
 	ro.zygote=zygote64_32
