@@ -44,6 +44,9 @@ TARGET_NO_RPC := true
 # Camera
 USE_CAMERA_STUB := true
 
+# CPU
+ENABLE_CPUSETS := true
+
 # Display
 TARGET_USE_PAN_DISPLAY := true
 
