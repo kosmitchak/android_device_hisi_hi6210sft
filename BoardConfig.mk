@@ -64,8 +64,6 @@ BOARD_KERNEL_BASE := 0x07478000
 BOARD_KERNEL_CMDLINE := hisi_dma_print=0 vmalloc=384M maxcpus=8 no_irq_affinity androidboot.selinux=disabled
 BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x07b88000 --tags_offset 0x02988000
 
-TARGET_PREBUILT_KERNEL := device/hisi/hi6210sft/Image
-
 # NFC
 BOARD_NFC_CHIPSET := pn547
 BOARD_NFC_DEVICE := "/dev/pn544"

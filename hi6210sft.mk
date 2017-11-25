@@ -145,7 +145,6 @@ PRODUCT_PACKAGES += \
 	iontest \
 	ion-unit-tests \
 	libGLES_android \
-	libion.huawei \
 	libion
 
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -168,18 +167,7 @@ PRODUCT_COPY_FILES += \
 
 # Huawei P8 Lite Components
 PRODUCT_PACKAGES += \
-	lights.hi6210sft \
 	sound_trigger.primary.hi6210sft \
-
-# Kernel
-ifeq ($(TARGET_PREBUILT_KERNEL),)
-LOCAL_KERNEL := device/hisi/hi6210sft/Image
-else
-LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
-endif
-
-PRODUCT_COPY_FILES += \
-    	$(LOCAL_KERNEL):kernel
 
 # Misc
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
